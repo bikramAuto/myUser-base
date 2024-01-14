@@ -23,7 +23,7 @@ public class Endpoints {
     @PostMapping("/createDocument")
     public String createDocument(@RequestBody Map<String, Object> document) {
         try {
-            mongodbServices.create("yourCollectionName", document);
+            mongodbServices.create("my-users", document);
             return "Document created successfully";
         } catch (Exception e) {
             return "Error creating document: " + e.getMessage();
